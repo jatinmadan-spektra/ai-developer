@@ -33,12 +33,8 @@
         "Order": 7
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/prod/Labs/lab-07.md",
-        "Order": 8
-      },
-      {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/prod/Labs/lab-08.md",
-        "Order": 9
+        "Order": 8
       }
     ]
   }

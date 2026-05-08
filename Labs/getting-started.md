@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this hands-on lab series, participants will explore the core capabilities of **Microsoft Foundry** and the **Semantic Kernel** framework to build intelligent, extensible AI applications. Designed for beginners in AI development, the labs guide participants through setting up AI projects in Microsoft Foundry, deploying the **GPT-4o** model, and connecting it seamlessly with Semantic Kernel to enable dynamic, prompt-based interactions. Participants will learn how to integrate **plugins**—such as time and weather utilities—to extend chatbot functionality, implement **Retrieval-Augmented Generation (RAG)** for more informed responses, and leverage **OpenAPI** to connect external services with minimal code. The labs also highlight responsible AI practices with **content filtering tools** in Foundry Studio and creative AI integration through **DALL·E** for image generation, delivered in a secure, cloud-based environment. This series provides foundational, hands-on experience with Semantic Kernel and Microsoft Foundry to help participants build scalable, AI-powered applications.
+In this hands-on lab series, participants will explore the core capabilities of **Microsoft Foundry** and the **Semantic Kernel** framework to build intelligent, extensible AI applications. Designed for beginners in AI development, the labs guide participants through setting up AI projects in Microsoft Foundry, deploying the **GPT-4o** model, and connecting it seamlessly with Semantic Kernel to enable dynamic, prompt-based interactions. Participants will learn how to integrate **plugins**—such as time and weather utilities—to extend chatbot functionality, implement **Retrieval-Augmented Generation (RAG)** for more informed responses, and leverage **OpenAPI** to connect external services with minimal code. The labs also highlight responsible AI practices with **content filtering tools** in Foundry Studio, delivered in a secure, cloud-based environment. This series provides foundational, hands-on experience with Semantic Kernel and Microsoft Foundry to help participants build scalable, AI-powered applications.
 
 ## Objectives
 
@@ -16,7 +16,6 @@ In this hands-on lab series, participants will explore the core capabilities of 
 - **Import Plugin using OpenAPI**: Seamlessly integrate external APIs into Semantic Kernel using OpenAPI specifications.
 - **Retrieval-Augmented Generation (RAG)**: Enhance AI responses by combining external knowledge retrieval with generative models using the RAG pattern.
 - **Responsible AI: Exploring Content Filters in Microsoft Foundry**: Apply content filtering tools to build safer, more accountable AI applications within Microsoft Foundry.
-- **Image Generation using DALL·E**: Generate creative visuals from text prompts by integrating DALL·E into your reference application.
 - **Multi-Agent Systems**: Coordinate multiple AI agents within Semantic Kernel to solve complex tasks through collaboration.
 
 ## Pre-requisites
@@ -32,7 +31,7 @@ In this hands-on lab series, participants will explore the core capabilities of 
 ## Architecture
 In this hands-on lab, participants will explore **Microsoft Foundry** and **Semantic Kernel** to build, deploy, and extend AI-powered applications. The journey begins with the **Azure Portal**, where they will access and manage AI services. They will deploy **GPT-4o** models using **Models + Endpoints**, enabling real-time AI interactions. To enhance response accuracy, participants will implement **Retrieval-Augmented Generation (RAG)** using **Azure AI Search**, ensuring contextually informed outputs.  
 
-The lab also covers **plugins**, such as **Time & Weather utilities** for real-time data retrieval and **OpenAPI integration** to connect external services seamlessly. Participants will explore **content filtering** within Microsoft Foundry, applying built-in safety measures to ensure responsible AI usage. Additionally, they will integrate **DALL·E** for AI-driven image generation, enabling creative AI applications. By the end of the lab, participants will have the foundational skills to develop scalable, secure, and extensible AI solutions using Azure’s powerful AI ecosystem.
+The lab also covers **plugins**, such as **Time & Weather utilities** for real-time data retrieval and **OpenAPI integration** to connect external services seamlessly. Participants will explore **content filtering** within Microsoft Foundry, applying built-in safety measures to ensure responsible AI usage. By the end of the lab, participants will have the foundational skills to develop scalable, secure, and extensible AI solutions using Azure’s powerful AI ecosystem.
 
 ## Architecture Diagram
 
@@ -48,7 +47,6 @@ The lab also covers **plugins**, such as **Time & Weather utilities** for real-t
 - **Azure AI Search**: Enhances **Retrieval-Augmented Generation (RAG)** by fetching relevant contextual data.  
 - **Azure Blob Storage**: Stores indexed documents, datasets, and knowledge bases for AI-powered insights.  
 - **Azure AI Content Safety**: Provides content filtering and moderation tools to ensure responsible AI usage.   
-- **Azure AI Vision Services**: Supports **DALL·E** integration for AI-powered image generation.  
 - **Visual Studio Code (VS Code)**: Development environment for AI application coding, debugging, and testing.    
 - **Python SDKs & REST APIs**: Used to interact with **Microsoft Foundry, Semantic Kernel, and OpenAI services**.
 
