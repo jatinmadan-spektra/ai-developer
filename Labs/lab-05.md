@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will explore the Retrieval Augmented Generation (RAG) pattern, an AI architecture that enhances response quality by integrating relevant external knowledge into the generative process. Designed for those new to RAG, the lab guides you through how retrieval mechanisms work alongside generative models to deliver more accurate, informed, and context aware outputs. 
+In this exercise, you will explore the Retrieval-Augmented Generation (RAG) pattern, an AI architecture that enhances response quality by integrating relevant external knowledge into the generative process. Designed for those new to RAG, the lab guides you through how retrieval mechanisms work alongside generative models to deliver more accurate, informed, and context aware outputs. 
 
 ## Objectives
 
@@ -40,13 +40,13 @@ In this task, you will explore different flow types in Microsoft Foundry by depl
 
     ![](./media/new/w5.png)
 
-1. On the **Select or add data source**blade, provide the following details:
+1. On the **Select or add data source** blade, provide the following details:
 
     - Select data source: Select **Upload files (preview) (1)**
 
     - Subscription: Leave the default one **(2)**
 
-    - Select Azure Blob Storage resouce: Select the storage account that starts with **aifoundryhubxxxxxx (3)**
+    - Select Azure Blob Storage resource: Select the storage account that starts with **aifoundryhubxxxxxx (3)**
 
     - Click **Turn on CORS (4)** to grant access.
 
@@ -84,7 +84,7 @@ In this task, you will explore different flow types in Microsoft Foundry by depl
 
     ![](./media/new/lab04.png) 
 
-1. On the **Data Connection** blade, select **API Key (1)** for authenticatio and then click on **Next (2)**.    
+1. On the **Data Connection** blade, select **API Key (1)** for authentication and then click on **Next (2)**.    
 
     ![](./media/new/r1.png)
 
@@ -134,7 +134,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
 1. Paste the **AI search URL** that you copied earlier in the exercise besides `AI_SEARCH_URL` in **.env** file.
 
-1. Paste the **Primary admin key** that you copied earlier in the exercise besides `AI_SEARCH_KEY`.
+1. Paste the **Primary admin key** that you copied earlier in the exercise next to `AI_SEARCH_KEY`.
 
     ![](./media/new/t1.png)
 
@@ -593,7 +593,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/image_109.png)
 
-1. Once you receive the response, navigate back to the Visual studio code terminal and then press **Ctrl+C** to stop the build process.
+1. Once you receive the response, navigate back to the Visual Studio Code terminal and then press **Ctrl+C** to stop the build process.
 
 </details>
 

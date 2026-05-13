@@ -20,7 +20,7 @@ In this task, you will explore different flow types in Microsoft Foundry by adju
 
 1. Navigate back to the **Microsoft Foundry** portal in your browser.
 
-1. From the left navigation pane, click on **Guardrails + controls (1)**. Select **Content filters (2)** tab from the top menu bar and click **+ Create content filter (3)**.
+1. From the left navigation pane, click on **Guardrails + controls (1)**. Select the **Content filters (2)** tab from the top menu bar and click **+ Create content filter (3)**.
 
     ![](./media/new/y1.png)
 
@@ -29,6 +29,8 @@ In this task, you will explore different flow types in Microsoft Foundry by adju
      ![](./media/new/fltr.png)
 
 1. Leave the **Input filter** and **Output filter** blade to default and click on **Next**.
+
+    ![](./media/new/leavedef.png)
 
 1. On the **Apply filter to deployments (optional)** page, select **both deployments (1)** and click **Next (2)** to continue.
 
@@ -58,11 +60,11 @@ In this task, you will explore different flow types in Microsoft Foundry by filt
 
       ![](./media/new/y6.png)
 
-1. Click on **CustomBlocklist<inject key="Deployment ID" enableCopy="false"></inject>** created.
+1. Click on **CustomBlocklist<inject key="Deployment ID" enableCopy="false"></inject>** that was created.
 
     ![](./media/new/y7.png)
 
-1. Fromt the top menu bar, click on **+ Add new term**.
+1. From the top menu bar, click on **+ Add new term**.
 
     ![](./media/new/y8.png)
 
@@ -74,7 +76,7 @@ In this task, you will explore different flow types in Microsoft Foundry by filt
 
     ![](./media/new/y10.png)
 
-1. Repeat the step for the following and select the type as required (**Exact Match** or **Regex**):-
+1. Repeat the step for the following terms and select the type as required (**Exact Match** or **Regex**):-
 
     - credentials
     - exploit
