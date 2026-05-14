@@ -1,30 +1,28 @@
-# Exercise 7: Image Generation using DALL-E (Read-only)
+# Exercise 7: Image Generation using gpt‑image‑2 (Read-only)
 
 ### Estimated Duration: 25 Minutes
 
 ## Overview
 
-In this exercise, you will integrate image generation capabilities into your AI applications using DALL·E, an advanced AI model developed by OpenAI that transforms text prompts into vivid images. You will explore how DALL·E can create visuals ranging from realistic objects and scenes to imaginative, abstract concepts unlocking new possibilities for creative expression and user interaction.
-
->**Note:** As DALL-E model is being retired soon, we have observed that deployments may not work consistently across all subscriptions; therefore, this exercise is provided as a read-only exercise. You may review the steps and content to understand the workflow without performing the deployment.
+In this exercise, you will integrate image generation capabilities into your AI applications using gpt‑image‑2, an advanced AI model developed by OpenAI that transforms text prompts into vivid images. You will explore how gpt‑image‑2 can create visuals ranging from realistic objects and scenes to imaginative, abstract concepts unlocking new possibilities for creative expression and user interaction.
 
 ## Objectives
 
 In this exercise, you will complete the following tasks:
 
-- Task 1: Deploy a DALL-E model
+- Task 1: Deploy a gpt‑image‑2 model
 
 - Task 2: Create and import the Image Generation Plugin
 
-## Task 1: Deploy a DALL-E model
+## Task 1: Deploy a gpt‑image‑2 model
 
-In this task, you will explore different flow types in Microsoft Foundry by deploying a DALL-E model to generate images from text prompts.
+In this task, you will explore different flow types in Microsoft Foundry by deploying a gpt‑image‑2 model to generate images from text prompts.
 
-1. On the **Microsoft Foundry** prtal, from the left navigation pane, select **Model + endpoints (1)**, then click on **+ Deploy model (2)** drop-down and click **Deploy base model (3)**.
+1. On the **Microsoft Foundry** portal, from the left navigation pane, select **Model + endpoints (1)**, then click on **+ Deploy model (2)** drop-down and click **Deploy base model (3)**.
 
     ![](./media/new/a8.png)
 
-1. Search for **dall-e-3 (1)**, select the **dall-e-3 (2)** model, and click on **Confirm (3)**.
+1. Search for **gpt‑image‑2 (1)**, select the **gpt‑image‑2 (2)** model, and click on **Confirm (3)**.
 
     ![](./media/new/s1.png)
 
@@ -32,7 +30,7 @@ In this task, you will explore different flow types in Microsoft Foundry by depl
 
     ![](./media/new/s2.png)
 
-1. On the **dall-e-3** page, copy the **Target URI (1)** and **Key (2)** and paste them into Notepad.
+1. On the **gpt‑image‑2** page, copy the **Target URI (1)** and **Key (2)** and paste them into Notepad.
 
     ![](./media/new/s3.png)
 
@@ -47,9 +45,9 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/new/s4.png)
 
-1. Paste the **Target URI** that you copied earlier in the exercise besides `AZURE_TEXT_TO_IMAGE_ENDPOINT`.
+1. Paste the **Target URI** that you copied earlier in the exercise next to `AZURE_TEXT_TO_IMAGE_ENDPOINT`.
 
-1. Paste the **API key** that you copied earlier in the exercise besides `AZURE_TEXT_TO_IMAGE_API_KEY`.
+1. Paste the **API key that you copied earlier in the exercise next to `AZURE_TEXT_TO_IMAGE_API_KEY`. Also, replace the value of `AZURE_TEXT_TO_IMAGE_DEPLOYMENT_NAME` with **"gpt-image-2"**.
 
     ![](./media/new/s5.png)
 
@@ -73,7 +71,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
     from PIL import Image
 
     class ImageGenerationPlugin:
-        """Plugin for generating images using DALL-E."""
+        """Plugin for generating images using gpt‑image‑2."""
 
         def __init__(self):
             """Initialize the ImageGenerationPlugin."""
@@ -94,7 +92,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
             kernel=None  # Allow kernel to be passed as a parameter
         ) -> str:
             """
-            Generate an image using DALL-E based on the provided text prompt.
+            Generate an image using gpt‑image‑2 based on the provided text prompt.
             Returns the URL of the generated image.
             """
             try:
@@ -389,7 +387,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
 In this exercise, you have completed the following:
 
-- Deployed a DALL-E model.
+- Deployed a gpt‑image‑2 model.
 
 - Created and imported the Image Generation Plugin. 
 

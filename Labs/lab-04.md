@@ -18,7 +18,7 @@ In this exercise, you will complete the following tasks:
 
 In this task, you will explore different flow types in Microsoft Foundry by running the app without the OpenAPI Plugin to observe its default behavior.
 
-1. Launch your AI Chat app in any of your preferred languages, and submit the following prompt, and see how it responds:
+1. Launch your AI Chat app in any of your preferred languages, and submit the following prompt and see how it responds:
 
     ```
     What are my work items?
@@ -44,14 +44,14 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
     ```
     >**Note**:- Please don't close the `terminal`.
 
-1. Open the following link in a new browser tab to reveiw the OpenAPI spec: 
+1. Open the following link in a new browser tab to review the OpenAPI spec: 
     ```
     http://127.0.0.1:8000/openapi.json
     ```
 
     ![](./media/image_075.png)
 
-1. Open the following link in another browser tab to go to the Swagger page for the api: 
+1. Open the following link in another browser tab to go to the Swagger page for the API: 
     ```
     http://127.0.0.1:8000/docs
     ```
@@ -187,7 +187,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/e7.png)
 
-1. Once you receive the response, navigate back to the Visual studio code terminal and then press **Ctrl+C** to stop the build process.
+1. Once you receive the response, navigate back to the Visual Studio code terminal and then press **Ctrl+C** to stop the build process.
 
 </details>
 

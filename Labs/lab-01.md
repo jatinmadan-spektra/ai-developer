@@ -14,7 +14,7 @@ In this exercise, you will complete the following tasks:
 
 ## Task 1: Create Azure AI Search
 
-In this task ,you will create an Azure AI Search resource.
+In this task, you will create an Azure AI Search resource.
 
 1. On the Azure portal search bar, search for **AI Search (1)** and select **AI Search (2)** from the results.
 
@@ -24,7 +24,7 @@ In this task ,you will create an Azure AI Search resource.
 
     ![](./media/new/c2.png)
 
-1. On the **Create a search service** page, provide the following details and then click on **Review+create (6)**:
+1. On the **Create a search service** page, provide the following details, then click on **Review+create (6)**:
 
     - **Subscription:** Leave the default one **(1)**
 
@@ -46,7 +46,7 @@ In this task ,you will create an Azure AI Search resource.
 
 ## Task 2: Set up Microsoft Foundry
 
-In this task, you will explore different flow types in Microsoft Foundry by creating a AI hub through Azure portal, then deploying the GPT-4o model, and testing its capabilities in the playground from the Microsoft Foundry.
+In this task, you will explore different flow types in Microsoft Foundry by creating an AI hub through Azure portal, then deploying the GPT-4o model, and testing its capabilities in the playground from the Microsoft Foundry.
 
 1. On the **Azure portal**, search for **Microsoft Foundry (1)** and select **Microsoft Foundry (2)** from the results.
 

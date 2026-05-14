@@ -374,7 +374,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/new/f3.png)
 
-1. Once you receive the response, navigate back to the Visual studio code terminal and then press **Ctrl+C** to stop the build process.
+1. Once you receive the response, navigate back to the Visual Studio code terminal and then press **Ctrl+C** to stop the build process.
 
 </details>
 
@@ -411,7 +411,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/new/f5a.png)
 
-1. Paste the geocoding API key you received just now via e-mail besides `GEOCODING_API_KEY`.
+1. Paste the geocoding API key you received just now via e-mail next to `GEOCODING_API_KEY`.
 
     ![](./media/new/g5.png)
 
@@ -423,7 +423,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/new/f5.png)
 
-1. Add the following code in the `#Import Modules` section of the file.
+1. Add the following code to the `#Import Modules` section of the file.
 
     ```
     from plugins.geo_coding_plugin import GeoPlugin
@@ -475,7 +475,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
     What are the geo-coordinates for Tampa, FL
     ```
 
-1. Since the AI has the **Geocoding Plugin**, it will be able to provide real-time information, you will get a response similar to the following:
+1. Since the AI has the **Geocoding Plugin**, it will be able to provide real-time information, you will receive a response similar to the following:
 
     ```
     The geo-coordinates for Tampa, FL are:

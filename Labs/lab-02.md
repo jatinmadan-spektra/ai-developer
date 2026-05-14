@@ -35,7 +35,7 @@ In this task, you will explore different flow types in Microsoft Foundry by sett
 
     ![](./media/new/d2.png)
 
-    >**Note:** If a pop up window opens asking for Github Copilot chat wants to sign in, click on **Cancel**.
+    >**Note:** If a pop-up window opens asking for Github Copilot chat wants to sign in, click on **Cancel**.
 
 1. Navigate back to **Microsoft Foundry** portal and click on **Overview (1)** and select **Go to Foundry Portal (2)**.
 
@@ -54,9 +54,9 @@ In this task, you will explore different flow types in Microsoft Foundry by sett
 
     ![](./media/new/d5.png)
 
-1. Paste **Azure OpenAI Service endpoint** copied earlier in the exercise besides `AZURE_OPENAI_ENDPOINT`.
+1. Paste **Azure OpenAI Service endpoint** copied earlier in the exercise next to `AZURE_OPENAI_ENDPOINT`.
     >Note:- Ensure that every value in the **.env** file is enclosed in **double quotes ("")**.
-1. Paste **API key** copied earlier in the exercise besides `AZURE_OPENAI_API_KEY`.
+1. Paste **API key** copied earlier in the exercise next to `AZURE_OPENAI_API_KEY`.
 
     ![](./media/new/d6.png)
 
@@ -71,7 +71,7 @@ In this task, you will explore different flow types in Microsoft Foundry by sett
 
     ![](./media/sk23.png)
 
-1. Paste **Azure OpenAI Service endpoint** copied earlier in the exercise besides `AOI_ENDPOINT`.
+1. Paste **Azure OpenAI Service endpoint** copied earlier to the exercise besides `AOI_ENDPOINT`.
 
     >**Note**:- Ensure that every value in the **appsettings.json** file is enclosed in **double quotes ("")**.
 
@@ -168,7 +168,7 @@ In this task, you will explore different flow types in Microsoft Foundry by upda
     streamlit run app.py
     ```
 
-1. If you are asked for any email to register, feel free to use the below provided email, and hit **Enter**. This will automatically open the app in the browser.
+1. If you are asked for any email to register, feel free to use the email provided below, and hit **Enter**. This will automatically open the app in the browser.
 
     ```
     test@gmail.com
@@ -230,7 +230,7 @@ In this task, you will explore different flow types in Microsoft Foundry by upda
 
     ![](./media/new/e2.png)
 
-1. Run the following line of code to trust the dev certificates necessary to run the app locally, and then select **Yes**:
+1. Run the following command to trust the dev certificates necessary to run the app locally, and then select **Yes**:
 
     ```
     dotnet dev-certs https --trust
