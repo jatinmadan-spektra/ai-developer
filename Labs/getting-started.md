@@ -2,7 +2,11 @@
 
 ### Overall Estimated Duration: 4 Hours
 
-## Overview
+## Lab Scenario
+
+Contoso Innovations is building an AI-powered employee assistant using Microsoft Foundry and Semantic Kernel. As an AI Developer, your task is to enhance the chatbot by integrating Semantic Kernel plugins for time, geolocation, weather, and external OpenAPI services, enabling it to retrieve real-time information and perform intelligent function calling. You will also implement Retrieval-Augmented Generation (RAG) with Azure AI Search to help the assistant answer employee questions using organizational knowledge. By the end of the lab, you will have developed a more capable, context-aware AI assistant that combines LLM reasoning with external tools and enterprise data sources.
+
+## Lab Overview
 
 In this hands-on lab series, participants will explore the core capabilities of **Microsoft Foundry** and the **Semantic Kernel** framework to build intelligent, extensible AI applications. Designed for beginners in AI development, the labs guide participants through setting up AI projects in Microsoft Foundry, deploying the **GPT-4o** model, and connecting it seamlessly with Semantic Kernel to enable dynamic, prompt-based interactions. Participants will learn how to integrate **plugins**—such as time and weather utilities—to extend chatbot functionality, implement **Retrieval-Augmented Generation (RAG)** for more informed responses, and leverage **OpenAPI** to connect external services with minimal code. The labs also highlight responsible AI practices with **content filtering tools** in Foundry Studio, delivered in a secure, cloud-based environment. This series provides foundational, hands-on experience with Semantic Kernel and Microsoft Foundry to help participants build scalable, AI-powered applications.
 
@@ -51,12 +55,20 @@ The lab also covers **plugins**, such as **Time & Weather utilities** for real-t
 - **Python SDKs & REST APIs**: Used to interact with **Microsoft Foundry, Semantic Kernel, and OpenAI services**.
 
 ## Getting Started with the Lab
- 
+
+Welcome to your AI Developer - Microsoft Foundry and Semantic Kernel Fundamentals Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
    ![](./media/new/vm1.png)
+
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the A↕: 100% icon located next to the timer in the lab environment. 
+
+   ![Lab Guide Zoom In/Zoom Out](./media/new/zoom-new.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -66,7 +78,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![Explore Lab Resources](./media/new/env.png)
+   ![Explore Lab Resources](./media/new/n-evn-aidev.png)
  
 ## Utilizing the Split Window Feature
  

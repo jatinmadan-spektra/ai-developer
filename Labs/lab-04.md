@@ -2,6 +2,10 @@
 
 ### Estimated Duration: 25 Minutes
 
+## Scenario
+
+Contoso Innovations needs its AI assistant to access enterprise work item data stored in an external service. As an AI Developer, you will use OpenAPI specifications to import and integrate the WorkItems API as a Semantic Kernel plugin, enabling the assistant to retrieve and manage work items through natural language interactions.
+
 ## Overview
 
 In this exercise, you will explore the integration of OpenAPI with Semantic Kernel to enhance AI-driven applications. Designed for developers new to API orchestration, the lab guides you through leveraging OpenAPI specifications to load external services as plugins dynamically. You will learn to import the provided WorkItems API as an OpenAPI plugin, enabling seamless interaction through AI-driven prompts. By the end of this lab, you will understand how OpenAPI simplifies API integration, reduces manual coding, and enhances the automation of external service calls.

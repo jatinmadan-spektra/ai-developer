@@ -2,6 +2,10 @@
 
 ### Estimated Duration: 30 Minutes
 
+## Scenario
+
+Contoso Innovations is developing an advanced AI solution that requires multiple specialized agents to collaborate on complex business tasks. As an AI Developer, you will design and orchestrate a multi-agent system where individual agents handle distinct responsibilities and coordinate their actions to achieve a common goal.
+
 ## Overview
 
 In this exercise, you will gain hands-on experience building a multi-agent chat system using the **Semantic Kernel** framework integrated with the **Microsoft Foundry GPT-4o** model. This lab introduces multi-agent system development, where a user request is processed by multiple agents, each with a distinct persona and responsibility. Designed for those new to AI driven automation, the lab guides you through integrating agents that collaborate to generate a well-rounded response. Whether handling specialized tasks or combining expertise, this system ensures comprehensive context-aware outputs. By the end of this lab, you will understand how to orchestrate multi-agent interactions to enhance AI-driven decision-making and user experiences.
@@ -64,6 +68,12 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
     ![](./media/new/z2.png)
     
     ![](./media/new/z3.png)
+
+    >**Note**: If you encounter an issue with the output, follow the steps below to resolve it:
+    
+    * Click on **Python (1)**, then select **src (2)**, and open **app.py (3)**. Remove the highlighted line **from chat import process_message, reset_chat_history (4)** and save the file. After saving the changes, repeat the steps starting from Step 4.
+
+      ![](./media/new/multiagent.png)
 
 </details>
 

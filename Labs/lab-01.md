@@ -2,6 +2,10 @@
 
 ### Estimated Duration: 20 Minutes
 
+## Scenario
+
+Contoso Innovations is planning to build AI-powered business applications using Microsoft Foundry. As an AI Developer, you have been tasked with exploring the Microsoft Foundry environment, deploying foundational AI models, and interacting with them through the playground. 
+
 ## Overview
 
 In this exercise, you will gain hands-on experience setting up **Microsoft Foundry** and deploying the GPT-4o model. You will create an Azure AI Search resource to enable document retrieval capabilities and configure a Microsoft Foundry AI Hub to deploy the GPT-4o model. Finally, you will test the deployed model's capabilities in the Foundry Playground.
@@ -82,6 +86,10 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
 1. From the left navigation pane, select **Model + endpoints (1)**, then click on **+ Deploy model (2)** drop-down and click **Deploy base model (3)**.
 
+    >**Note**: If the Foundry portal launches in the new UI experience, switch back to the classic version and then relaunch the portal.
+
+    ![](./media/new/new-foundry.png)
+
     ![](./media/new/dbm.png)
 
 1. Search for **gpt-4o (1)**, select the **gpt-4o** model **(2)**, and click on **Confirm (3)**.
@@ -92,13 +100,15 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     - **Deployment type**: Choose **Standard (1)** 
     
-    - **Model version**: Select **2024-11-20 (2)**
+    - **Model version**: Select **2024-11-20 (Default) (2)**
 
     - **Tokens per Minute Rate Limit**: Limit to **50K (3)** (You can use keyboard arrows to increase or decrease the value)
 
-    - Click on **Connect and deploy (4)**
+    - Click on **Create resource and deploy (4)**
 
-      ![](./media/new/cnd.png)
+      >**Note**: If the selected region is not supported, please choose an alternative supported region and proceed with the deployment.
+
+      ![](./media/new/gpt-4o-new.png)
 
 1. From the top, click on **Microsoft Foundry**.
 

@@ -2,6 +2,10 @@
 
 ### Estimated Duration: 40 Minutes
 
+## Scenario
+
+Contoso Innovations wants its AI assistant to provide accurate answers based on internal company policies and documents. As an AI Developer, you will implement a Retrieval-Augmented Generation (RAG) solution by creating embeddings, indexing enterprise content in Azure AI Search, and integrating a semantic search plugin with Semantic Kernel.
+
 ## Overview
 
 In this exercise, you will explore the Retrieval-Augmented Generation (RAG) pattern, an AI architecture that enhances response quality by integrating relevant external knowledge into the generative process. Designed for those new to RAG, the lab guides you through how retrieval mechanisms work alongside generative models to deliver more accurate, informed, and context aware outputs. 
