@@ -2,6 +2,10 @@
 
 ### Estimated Duration: 50 Minutes
 
+## Scenario
+
+Contoso Innovations is expanding its AI assistant to interact with external data and services through Semantic Kernel plugins. As an AI Developer, you will create and integrate custom plugins for time, geocoding, and weather services, enabling the assistant to perform real-world tasks and retrieve dynamic information. 
+
 ## Overview
 
 In this exercise, you will explore the power of plugins in enhancing LLM development with Semantic Kernel. Designed for those new to AI extensibility, the lab guides you through building and integrating plugins to expand the capabilities of your chatbot. 

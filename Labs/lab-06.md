@@ -2,6 +2,10 @@
 
 ### Estimated Duration: 25 Minutes
 
+## Scenario
+
+Contoso Innovations is committed to building safe and responsible AI solutions for its employees and customers. As an AI Developer, you will explore Microsoft Foundry content filtering capabilities to understand how harmful, unsafe, or inappropriate content can be detected and managed.
+
 ## Overview
 
 In this exercise, you will gain hands-on experience building safer and more responsible AI applications by leveraging content filtering capabilities in **Microsoft Foundry**.

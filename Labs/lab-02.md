@@ -2,6 +2,10 @@
  
 ### Estimated Duration: 25 Minutes
  
+## Scenario
+
+Contoso Innovations wants to enhance its AI assistant by integrating Semantic Kernel to enable intelligent orchestration between AI models and application logic. As an AI Developer, you will build a chat application, connect it to Microsoft Foundry models, and implement Semantic Kernel capabilities such as prompt execution and function calling. 
+
 ## Overview
 
 In this exercise, you will gain hands-on experience building an intelligent chat feature using the **Semantic Kernel** framework integrated with the **Microsoft Foundry GPT-4o** model. You will set up the development environment, configure necessary credentials, and implement a chat API that sends user prompts to the GPT-4o model via Semantic Kernel, returning dynamic AI-generated responses within a starter application.
@@ -42,6 +46,8 @@ In this task, you will explore different flow types in Microsoft Foundry by sett
     ![](./media/new/lab03.png)
 
 1. From the **Overview (1)** page, select **Azure OpenAI (2)** under Libraries, copy the **API Key (3)** and copy the **Azure OpenAI endpoint (4)** using the copy icons and paste it into **Notepad** as this is to be used in the upcoming exercises.
+
+    >**Note**: If the Azure OpenAI resource is deployed in a different region because the **gpt-4o** model is unavailable in the specified region, use the **Azure OpenAI Endpoint** and **API Key** from the deployed resource. For reference, see Exercise 1, Task 1, Step 3.
 
     ![](./media/new/keyned.png)
 
