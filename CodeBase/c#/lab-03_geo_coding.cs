@@ -3,9 +3,14 @@ using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 // Import Models
 using Microsoft.SemanticKernel.Connectors.OpenAI;
+using Microsoft.SemanticKernel.Connectors.AzureOpenAI;
 using BlazorAI.Plugins;
 using System;
-
+using Microsoft.SemanticKernel.Plugins.OpenApi;
+using Microsoft.SemanticKernel.Connectors.AzureAISearch;
+using Azure;
+using Azure.Search.Documents.Indexes;
+using Microsoft.Extensions.DependencyInjection;
 #pragma warning disable SKEXP0040 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 #pragma warning disable SKEXP0020 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 #pragma warning disable SKEXP0010 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
@@ -17,7 +22,7 @@ public partial class Chat
 {
     private ChatHistory? chatHistory;
     private Kernel? kernel;
-    private OpenAIPromptExecutionSettings? promptSettings;
+    private AzureOpenAIPromptExecutionSettings? promptSettings;
 
     [Inject]
     public required IConfiguration Configuration { get; set; }
@@ -45,10 +50,29 @@ public partial class Chat
         kernelBuilder.Services.AddHttpClient();
 
         // Challenge 05 - Register Azure AI Foundry Text Embeddings Generation
-
+        kernelBuilder.AddAzureOpenAITextEmbeddingGeneration(
+           Configuration["EMBEDDINGS_DEPLOYMODEL"]!,
+           Configuration["AOI_ENDPOINT"]!,
+           Configuration["AOI_API_KEY"]!);
 
         // Challenge 05 - Register Search Index
+        kernelBuilder.Services.AddSingleton<SearchIndexClient>(sp => 
+            new SearchIndexClient(
+                new Uri(Configuration["AI_SEARCH_URL"]!), 
+                new AzureKeyCredential(Configuration["AI_SEARCH_KEY"]!)
+            )
+        );
 
+        kernelBuilder.Services.AddSingleton<AzureAISearchVectorStoreRecordCollection<Dictionary<string, object>>>(sp =>
+        {
+            var searchIndexClient = sp.GetRequiredService<SearchIndexClient>();
+            return new AzureAISearchVectorStoreRecordCollection<Dictionary<string, object>>(
+                searchIndexClient,
+                "employeehandbook"
+            );
+        });
+
+kernelBuilder.AddAzureAISearchVectorStore();
 
         // Challenge 07 - Add Azure AI Foundry Text To Image
 
@@ -63,15 +87,12 @@ public partial class Chat
 
 
         // Challenge 03 - Create OpenAIPromptExecutionSettings
-        promptSettings = new OpenAIPromptExecutionSettings
+        promptSettings = new AzureOpenAIPromptExecutionSettings
         {
             ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions,
-            Temperature = 0.7,
-            TopP = 0.95,
+            SetNewMaxCompletionTokensEnabled = true,
             MaxTokens = 800
         };
-
-
     }
 
 
@@ -84,10 +105,23 @@ public partial class Chat
             kernel.Services.GetRequiredService<IHttpClientFactory>(),
             Configuration);
         kernel.ImportPluginFromObject(geocodingPlugin, "GeocodingPlugin");
+        var weatherPlugin = new WeatherPlugin(
+            kernel.Services.GetRequiredService<IHttpClientFactory>());
+        kernel.ImportPluginFromObject(weatherPlugin, "WeatherPlugin");
 
         // Challenge 04 - Import OpenAPI Spec
+        await kernel.ImportPluginFromOpenApiAsync(
+            pluginName: "todo",
+            uri: new Uri("http://localhost:5115/swagger/v1/swagger.json"),
+            executionParameters: new OpenApiFunctionExecutionParameters()
+            {
+                EnablePayloadNamespacing = true
+            }
+        );
 
         // Challenge 05 - Add Search Plugin
+        var searchPlugin = new ContosoSearchPlugin(Configuration);
+        kernel.ImportPluginFromObject(searchPlugin, "HandbookPlugin");
 
         // Challenge 07 - Text To Image Plugin
 
@@ -106,19 +140,26 @@ public partial class Chat
             StateHasChanged();
 
             // Start Challenge 02 - Sending a message to the chat completion service
-
-            // Your code goes here
-            chatHistory.AddUserMessage(userMessage);
-            var chatCompletionService = kernel.GetRequiredService<IChatCompletionService>();
-            var assistantResponse = await chatCompletionService.GetChatMessageContentAsync(
-                chatHistory: chatHistory,
-                executionSettings: promptSettings,
-                kernel: kernel);
-            chatHistory.AddAssistantMessage(assistantResponse.Content);
-
+            try
+            {
+                chatHistory.AddUserMessage(userMessage);
+                var chatCompletionService = kernel.GetRequiredService<IChatCompletionService>();
+                var assistantResponse = await chatCompletionService.GetChatMessageContentAsync(
+                    chatHistory: chatHistory,
+                    executionSettings: promptSettings,
+                    kernel: kernel);
+                chatHistory.AddAssistantMessage(assistantResponse.Content);
+            }
+            catch (Exception ex)
+            {
+                chatHistory.AddAssistantMessage($"Error: {ex.Message}");
+            }
+            finally
+            {
+                loading = false;
+                StateHasChanged();
+            }
             // End Challenge 02 - Sending a message to the chat completion service
-
-            loading = false;
         }
     }
 }

@@ -14,60 +14,52 @@ In this exercise, you will be performing the following tasks:
 
 In this task, you will explore different flow types in Azure AI Foundry by adjusting filter settings to refine search results and improve query accuracy.
 
-1. Navigate to the [Azure AI Foundry](https://ai.azure.com/) portal.
+1. Navigate back to the **Microsoft Foundry** portal.
 
-1. Click on **Guardrails + Controls (1)** under **Protect and govern** in the left pane. Navigate to **Content filters (2)** tab and then **+ Create content filter (3)**.
+1. From the left navigation pane, click on **Guardrails (1)** and then click **Create (2)**.
 
-    ![](./media/sk43.png)
+    ![](./media/update-a.png)
 
-1. On the **Create filters to allow or block specific types of content** blade, specify the following configuration options and click on **Next (2)**:
-   - **Name**:  **AggressiveContentFilter (1)**
+1. On the **Create guardrail** screen, leave all configuration as default and click **Next**.
 
-     ![](./media/sk44.png)
+     ![](./media/update-b.png)
 
-1. Leave the visible options to default and click on **Next** twice.
+1. Now, select the **Agents (1)** and **Models (2)**, and click **Next (3)**
 
-1. On the **Create filters to allow or block specific types of content**, **Deployment (Optional)** blade, select **all 2** of the deployments, and click **Next (2)**.
+    ![](./media/update-c.png)
 
-    ![](./media/sk45.png)
+1. On the review screen, enter the **Guardrail name (1)** as **AggressiveContentFilter**, then review your models and agents and click **Create (2)**
 
-1. If you get a **Replacing existing content filter** warning, click on **Replace (1)**.
-
-    ![](./media/image_014.png)
-
-1. Create one **Create filter**.
-
-    ![](./media/sk46.png)
-
+    ![](./media/update-d.png)
 
 ## Task 2: Filter specific words or patterns
 
 In this task, you will explore different flow types in Azure AI Foundry by filtering specific words or patterns to refine search results and enhance data relevance.
 
-1. Navigate to **Blocklists (Preview) (1)** tab and then **+ Create blocklist (2)**.
+1. Navigate to **Blocklists (1)** tab and then click **Create blocklist (2)**.
 
-    ![](./media/sk47.png)
+    ![](./media/update-e.png)
     
-1. On the **Create a blocklist** blade, specify the following configuration options and click on **Create blocklist (3)**:
+1. On the **Create blocklist** blade, specify the following configuration options and click on **Create (3)**:
 
     - **Name**:  **CustomBlocklist<inject key="Deployment ID" enableCopy="false"></inject> (1)**
     - **Description**: This is a custom blocklist. **(2)**
 
-      ![](./media/sk48.png)
+      ![](./media/update-f.png)
 
-1. Click on **CustomBlocklist<inject key="Deployment ID" enableCopy="false"></inject>** created earlier.
+1. Select the **CustomBlocklist<inject key="Deployment ID" enableCopy="false"></inject> (1)** created earlier and click **Edit (2)**
 
-1. Click on **+ Add new term**.
+      ![](./media/update-g.png)
 
-    ![](./media/sk49.png)
+1. On the Custom Blocklist screen, click on **Add term**.
 
-1. Enter words **password (1)** and select the type as required (**Exact Match** or **Regex**) then click on **Add term**.
+    ![](./media/update-h.png)
 
-    ![](./media/sk50.png)
+1. On Add terms blade, Enter term as  **password (1)** and then click **Add (2)**, make sure the Type should be Exact match. 
 
-1. Click on **+ Add new term** again.   
+    ![](./media/update-i.png)   
 
-1. Repeat the step for the following and select the type as required (**Exact Match** or **Regex**):-
+1. Repeat the step for the following:-
 
     - credentials
     - exploit
@@ -82,7 +74,10 @@ In this task, you will explore different flow types in Azure AI Foundry by filte
     - poker
     - betting
 
-      ![](./media/sk51.png)
+1. Once all terms are added click on **Create**.
+
+      ![](./media/update-k.png)
+ 
 
 ## Review
 

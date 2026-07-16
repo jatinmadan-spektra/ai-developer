@@ -13,19 +13,23 @@ In this exercise, you will be performing the following tasks:
 
 In this task, you will explore different flow types in Azure AI Foundry by deploying a Text Embedding model to enable text representation and similarity analysis.
 
-1. Navigate to the [Azure AI Foundry](https://ai.azure.com/) portal.
-1. Click on **Models + endpoints (1)** under **My assets** in the left pane, then click on **+ Deploy model**, followed by **Deploy Base model (2)**.
+1. In your browser window in Lab VM, Navigate to the Microsoft Foundry portal.
 
-    ![](./media/image_007-1.png)
-1. Search for **text-embedding-ada-002**, select the model **(1)**, and click on **Confirm (2)**.
+1. From the left navigation pane, select **Models (1)**, then click **Deploy a base model (2)**
 
-    ![](./media/image_084.png)
+    ![](./media/su-1.png)
 
-1. Click on **Deploy**.
+1. Search for **text-embedding-3-small (1)**, and select the model **(2)**.
 
-1. Navigate back to **Models+endpoints (1)**, select **GPT-4o (2)**, and click on **Open in playground (3)**.
+    ![](./media/su-2.png)
 
-    ![](./media/sk34.png)
+1. Click on **Deploy (1)**, and select **Default settings (2)**.
+
+    ![](./media/su-3.png)
+
+1. Navigate back to **Models (1)**, select **GPT-5.4 (2)**.
+
+    ![](./media/su-4.png)
 
 1. Click on **Add your data (1)** and select **+ Add a data source (2)**.
 

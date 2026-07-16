@@ -291,6 +291,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 1. Add the following code in the `// Import Models` section of the file.
     ```
     using Microsoft.SemanticKernel.Connectors.OpenAI;
+    using Microsoft.SemanticKernel.Connectors.AzureOpenAI;
     using BlazorAI.Plugins;
     using System;
     ```
@@ -299,7 +300,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
 1. Search **private Kernel? kernel;** (using Ctrl+F)  and add the following piece of code below it:
     ```
-    private OpenAIPromptExecutionSettings? promptSettings;
+    private AzureOpenAIPromptExecutionSettings? promptSettings;
     ```
 
     ![](./media/new/e7.png)
@@ -313,11 +314,10 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
 1. Add the following code in the `// Challenge 03 - Create OpenAIPromptExecutionSettings` (1) section of the file.
     ```
-    promptSettings = new OpenAIPromptExecutionSettings
+    promptSettings = new AzureOpenAIPromptExecutionSettings
     {
         ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions,
-        Temperature = 0.7,
-        TopP = 0.95,
+        SetNewMaxCompletionTokensEnabled=true,
         MaxTokens = 800
     };
     ```
