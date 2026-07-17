@@ -96,12 +96,20 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
     dotnet run
     ```
     >**Note**:- Please don't close the `terminal`.
-1. You can find the OpenAPI spec in the following path `http://localhost:5115/swagger/v1/swagger.json`.
+1. Open the following link in a new browser tab to review the OpenAPI spec:
+   ```
+   http://localhost:5115/swagger/v1/swagger.json
+   ```
 
     ![](./media/image_079.png)
-1. The swagger page can be found at `http://localhost:5115/swagger/index.html`.
+
+1. Open the following link in another browser tab to go to the Swagger page for the API:        
+    ```
+    http://localhost:5115/swagger/index.html
+    ```
 
     ![](./media/image_080.png)
+
 1. Navigate to `Dotnet>src>BlazorAI>Components>Pages` directory and open **Chat.razor.cs (1)** file.
 
     ![](./media/image_038.png)
@@ -129,7 +137,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
 1. In case you encounter any indentation error, use the code from the following URL:
     ```
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/c%23/lab-04.cs
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/c%23/lab-04.cs
     ```
 1. Save the file.
 1. Right click on `Dotnet>src>Aspire>Aspire.AppHost` **(1)** in the left pane and select **Open in Integrated Terminal (2)**.
@@ -139,7 +147,11 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
     ```
     dotnet run
     ```
-1. Open a new tab in the browser and navigate to the link for **blazor-aichat**, i.e. **https://localhost:7118/**.
+1. Open a new tab in the browser and navigate to the link for **blazor-aichat** 
+
+    ```
+    https://localhost:7118/
+    ```
     >**Note**: If you receive security warnings in the browser, close the browser and follow the link again.
 1. Submit the following prompt and see how the AI responds:
     ```

@@ -350,7 +350,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
 1. In case you encounter any indentation error, use the code from the following URL:
     ```
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/c%23/lab-03_time_plugin.cs
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/c%23/lab-03_time_plugin.cs
     ```
 1. Save the file.
 
@@ -525,7 +525,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 1. In case you encounter any indentation error, use the code from the following URL:
 
     ```
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/c%23/lab-03_geo_coding.cs
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/c%23/lab-03_geo_coding.cs
     ```
 
 1. Save the file.
@@ -938,7 +938,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 1. In case you encounter any indentation error, use the code from the following URL:
 
     ```
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/c%23/lab-03_weather.cs
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/c%23/lab-03_weather.cs
     ```
 1. Save the file.
 

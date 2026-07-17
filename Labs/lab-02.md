@@ -223,7 +223,7 @@ In this task, you will explore different flow types in Microsoft Foundry by upda
 1. In case you encounter any indentation error, use the code from the following URL: 
 
     ```
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/c%23/lab-02.cs
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/c%23/lab-02.cs
     ```
 
 1. Use **Ctrl+S** to save the file.
