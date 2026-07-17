@@ -27,57 +27,45 @@ In this task, you will explore different flow types in Azure AI Foundry by deplo
 
     ![](./media/su-3.png)
 
-1. Navigate back to **Models (1)**, select **GPT-5.4 (2)**.
+1. Navigate back to **Models**, select **GPT-5.4**.
 
     ![](./media/su-4.png)
 
-1. Click on **Add your data (1)** and select **+ Add a data source (2)**.
+1. Once on the details screen of gpt-5.4, click **Save as agent**.
 
-    ![](./media/image_085a.png)
+    ![](./media/su-5.png)
 
-1. On the **Select or add data source**blade, provide the following details and then click on **Next (6)**:
+1. Create an agent pop up appears, enter the agent name as **gpt (1)** and click **create and open playground (2)**.
+    
+    ![](./media/su-6.png)
 
-    - Select **Upload files (1)** for `Data source`
-    - Subscription: Leave the default one **(2)**
-    - Select Azure blob Azure Storage blob resouce: Select the storage account that starts with **aifoundryhubxxxxxx (3)**
-    - Select Azure AI Search resource: Select **ai-search-<inject key="Deployment ID" enableCopy="false"></inject> (4)** 
-    - Enter the index name: Enter **employeehandbook (5)** 
- 
-      ![](./media/sk35.png)
+1. On the playground screen, scroll down and click **add (1)** on the knowledge section, then click **Connect to Foundy IQ (2)**.
 
-      >**Note:** If you receive a message prompting you to **Turn on CORS**, go ahead and click on it.
+    ![](./media/su-7.png)
 
-      ![](./media/sk35a.png)      
+1. On Connect to Foundry IQ pop-up, select Connection as **ai-search-<inject key="Deployment ID" enableCopy="false"></inject>** and on knowledge base click **Create a new base in ai-search-<inject key="Deployment ID" enableCopy="false"></inject>**.
 
-1. Click on **Browse for files**.
+    ![](./media/su-8.png)
 
-    ![](./media/sk36.png)
+1. On Create a new knowledge base screen,  enter name as **kb-<inject key="Deployment ID" enableCopy="false"></inject> (1)** and verify the chat completion model is **gpt-5.4 (2)**, and select **upload files (3)**.
   
-1. Navigate to `C:\LabFiles\ai-developer\Dotnet\src\BlazorAI\data\` and select **employee_handbook.pdf (1).** Click on **Open (2)**.
+    ![](./media/su-9.png)
 
-    ![](./media/image_087.png)
+1. File path 
 
-1. Click on **Upload files**.
+1. On Create a knowledge source screen, enter name as **ks-file-<inject key="Deployment ID" enableCopy="false"></inject> (1)**, verify the embedding model as **text-embedding-3-small (2)**, and click **create (3)**.
 
-    ![](./media/sk37.png)
+    ![](./media/su-10.png)
 
-1. Click on **Next**.
+1. Wait for 1-2 minutes until file uploading completes.
 
-1. On the **Data Management** page, click on **Next**.
+1. Once the status of the file is **active(1)**, click on **Save knowledge base (2)**.
 
-    ![](./media/sk38.png)
+    ![](./media/su-11.png)
 
-1. On the **Data Connection** blade, select **API Key (1)** for authenticatio and then click on **Next (2)**.    
+1. Once changes are saved, click **Use in an agent (1)** tab and select your **agent (2)**.
 
-    ![](./media/sk39.png)
-
-1. Review the configuration and then click on **Save and close**.
-
-    ![](./media/sk40.png)
-
-1. The data injection might take around 5 minutes.
-
-    ![](./media/sk41.png)
+    ![](./media/su-12.png)
 
 1. Navigate to the **Azure Portal** and search **AI Search (1).** Click on it and open the **AI Search (2)** resource located there.
 
@@ -91,7 +79,7 @@ In this task, you will explore different flow types in Azure AI Foundry by deplo
 
     ![](./media/image_091.png)
 
-1. Navigate to **Keys (1)** under **Settings** in the left pane, copy the **Primary admin key (2)** from Azure Portal, and paste it into Notepad.
+1. Navigate to **Keys (1)** under **Security + networking** in the left pane, copy the **Primary admin key (2)** from Azure Portal, and paste it into Notepad.
 
     ![](./media/image_092.png)
 
