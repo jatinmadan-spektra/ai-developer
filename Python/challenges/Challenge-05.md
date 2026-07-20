@@ -109,7 +109,7 @@ In this challenge, you will create a Semantic Search Plugin that utilizes an Azu
 
 ### Use AI Foundry to deploy a Text Embedding model
 
-1. Using [Azure AI Foundry](https://ai.azure.com/resource/deployments), deploy a *Standard* **text-embedding-ada-002** model in the same deployment as your previous GPT-4o model. Once deployed, add the **Embedding Deployment Model Name** as a new setting to the **.env** file in the reference application. You will need this value later when configuring the Semantic Search Plugin.
+1. Using [Azure AI Foundry](https://ai.azure.com/resource/deployments), deploy a *Standard* **text-embedding-ada-002** model in the same deployment as your previous GPT-5.4 model. Once deployed, add the **Embedding Deployment Model Name** as a new setting to the **.env** file in the reference application. You will need this value later when configuring the Semantic Search Plugin.
 
     ![Embedding Model](./Resources/image/ch05img2.png)
 

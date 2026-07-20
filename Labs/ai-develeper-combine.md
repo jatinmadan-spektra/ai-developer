@@ -4,7 +4,7 @@
 
 ### Estimated Duration: 20 minutes
 
-This hands-on lab provides experience with Azure AI Foundry and its core capabilities, including AI model deployment and integration with Azure AI Search. Designed for those new to the platform, the lab guides you step-by-step to set up an AI project, deploy a GPT-4o model, and configure essential AI services.
+This hands-on lab provides experience with Azure AI Foundry and its core capabilities, including AI model deployment and integration with Azure AI Search. Designed for those new to the platform, the lab guides you step-by-step to set up an AI project, deploy a GPT-5.4 model, and configure essential AI services.
 
 You will explore Azure AI Foundry to create and manage AI projects, use Models + Endpoints to deploy base models, and leverage Azure AI Search for scalable, efficient data retrieval. Ensure all prerequisites are met before starting, as the cloud-based Azure AI Foundry platform allows you to complete the lab remotely.
 
@@ -16,7 +16,7 @@ In this exercise, you will be performing the following tasks:
 
 ### Task 1: Set up Azure AI Foundry
 
-In this task, you will explore different flow types in Azure AI Foundry by creating a AI hub through Azure portal, then deploying the GPT-4o model, and testing its capabilities in the playground from the Azure AI Foundry.
+In this task, you will explore different flow types in Azure AI Foundry by creating a AI hub through Azure portal, then deploying the GPT-5.4 model, and testing its capabilities in the playground from the Azure AI Foundry.
 
 1. On the **Azure portal** search bar, search for **AI Foundry (1)** and then select **Azure AI Foundry (2)** from the services.
 
@@ -51,11 +51,11 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
     ![](./media/sk9.png)
 
-8. Search for **gpt-4o (1)**, select the **gpt-4o** model **(2)**, and click on **Confirm (3)**.
+8. Search for **GPT-5.4 (1)**, select the **GPT-5.4** model **(2)**, and click on **Confirm (3)**.
 
     ![](./media/image_008.png)
 
-9. On the **Deploy model gpt-4o** blade, specify the following configuration options and click on **Deploy (4)**:
+9. On the **Deploy model GPT-5.4** blade, specify the following configuration options and click on **Deploy (4)**:
 
     - **Deployment type**: **Standard** (1)
     - **Model version**: 2024-05-13 (Default) (2)
@@ -73,7 +73,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
      >**Note**: **xxxxx** refers to randomly generated suffix.
 
-12. Navigate to **Model + endpoints (1)**, then select **gpt-4o (2)** model and the click on **Open in Playground (3)**.
+12. Navigate to **Model + endpoints (1)**, then select **GPT-5.4 (2)** model and the click on **Open in Playground (3)**.
 
     ![](./media/sk12.png)
 
@@ -147,7 +147,7 @@ In this task you will create a Azure AI Search resource.
 
 ### Estimated Duration: 25 Minutes
 
-This hands-on lab provides practical experience with Semantic Kernel and the Azure AI Foundry GPT-4o model. Designed for those new to AI development, the lab guides you step-by-step on how to build an intelligent chat feature within a starter application. You will use the Semantic Kernel framework to connect with the GPT-4o model, implement a chat API that sends user prompts, and return dynamic AI-generated responses.
+This hands-on lab provides practical experience with Semantic Kernel and the Azure AI Foundry GPT-5.4 model. Designed for those new to AI development, the lab guides you step-by-step on how to build an intelligent chat feature within a starter application. You will use the Semantic Kernel framework to connect with the GPT-5.4 model, implement a chat API that sends user prompts, and return dynamic AI-generated responses.
 
 ### Objectives
 In this exercise, you will be performing the following tasks:
@@ -1527,7 +1527,7 @@ In this task, you will explore different flow types in Azure AI Foundry by deplo
 
 4. Click on **Deploy**.
 
-5. Navigate back to **Models+endpoints (1)**, select **GPT-4o (2)**, and click on **Open in playground (3)**.
+5. Navigate back to **Models+endpoints (1)**, select **GPT-5.4 (2)**, and click on **Open in playground (3)**.
 
       ![](./media/sk34.png)
 
@@ -2628,8 +2628,8 @@ In this series of exercises, we explored advanced AI development techniques usin
 
 * **Model Deployment & Integration**
 
-  * Created AI projects and deployed the **GPT-4o** base model using **Azure AI Foundry Models + Endpoints**.
-  * Integrated **Semantic Kernel** with **GPT-4o** to enable intelligent, dynamic AI interactions.
+  * Created AI projects and deployed the **GPT-5.4** base model using **Azure AI Foundry Models + Endpoints**.
+  * Integrated **Semantic Kernel** with **GPT-5.4** to enable intelligent, dynamic AI interactions.
   * Developed a chat API to process user prompts and generate AI-driven responses.
 
 * **Plugin & API Orchestration**

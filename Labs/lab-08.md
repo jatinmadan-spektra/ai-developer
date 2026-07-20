@@ -55,7 +55,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
     ![](./media/image_125.png)
 1. Remove the existing code and add the code from the following URL in the file.
     ```
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/c%23/lab-08.cs
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/c%23/lab-08.cs
     ```
 1. Save the file.
 1. Right click on `Dotnet>src>Aspire>Aspire.AppHost` **(1)** in the left pane and select **Open in Integrated Terminal (2)**.
@@ -65,7 +65,10 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
     ```
     dotnet run
     ```
-1. Open a new tab in the browser and navigate to the link for **blazor-aichat**, i.e. **https://localhost:7118/**.
+1. Open a new tab in the browser and navigate to the link for **blazor-aichat**.
+    ``` 
+    https://localhost:7118/
+    ```
 
     >**Note**: If you receive security warnings in the browser, close the browser and follow the link again.
 1. Select **Multi-Agent (1)** on the left-hand side pane.
@@ -77,7 +80,9 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
     ```
 1. You will receive a response similar to the one shown below:
 
-    ![](./media/image_127.png)
+    ![](./media/up-1.png)
+    
+    ![](./media/up-2.png)
 </details>
 
 ## Review
