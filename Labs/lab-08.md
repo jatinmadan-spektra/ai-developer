@@ -15,13 +15,13 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 <details>
 <summary><strong>Python</strong></summary>
 
-1. Navigate to `Python>src` directory and open **multi_agent.py** file.
+1. In VS Code expand **Python (1) > src (2)**  directory and open **multi_agent.py (3)** file.
 
     ![](./media/sk59.png)
 
 1. Remove the existing code and add the code from the following URL in the file.
     ```
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/python/lab-08.py
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/python/lab-08.py
     ```
 1. Save the file.
 1. Right click on `Python>src` **(1)** in the left pane and select **Open in Integrated Terminal (2)**.
