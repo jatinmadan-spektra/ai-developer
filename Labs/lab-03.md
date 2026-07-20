@@ -140,7 +140,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
 1. In case you encounter any indentation error, use the code from the following URL:
     ```
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/python/lab-03_time_plugin.py
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/python/lab-03_time_plugin.py
     ```
 1. Save the file.
 
@@ -167,6 +167,8 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
     ```
 
     ![](./media/new/f9.png)
+
+    >**Note:** If no response is generated, stop the current state and rerun the streamlit run app.py command from the terminal and try again.
 
 </details>
 
@@ -452,7 +454,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 1. In case you encounter any indentation error, use the code from the following URL:
     ```
 
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/python/lab-03_geo_coding.py
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/python/lab-03_geo_coding.py
     ```
 
 1. Save the file.
@@ -695,7 +697,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 1. In case you encounter any indentation error, use the code from the following URL:
 
     ```
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/python/lab-03_weather.py
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/python/lab-03_weather.py
     ```
 
 1. Save the file.
