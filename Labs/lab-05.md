@@ -123,37 +123,37 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
      ```
      import json
      import os
-     from typing import Dict, List, Any, Optional
+     from typing import Annotated, Dict, List, Any
 
      import requests
      from azure.core.credentials import AzureKeyCredential
-     from azure.search.documents import SearchClient
+     from azure.search.documents.indexes import SearchIndexClient
      from azure.search.documents.models import VectorizedQuery
      from dotenv import load_dotenv
+     from semantic_kernel.functions import kernel_function
 
      class ContosoSearchPlugin:
          def __init__(self):
              load_dotenv()
-            
+
              self.openai_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
              self.openai_api_key = os.getenv("AZURE_OPENAI_API_KEY")
              self.embedding_deployment = os.getenv("AZURE_OPENAI_EMBED_DEPLOYMENT_NAME")
              self.embedding_api_version = os.getenv("AZURE_OPENAI_API_VERSION", "2023-05-15")
-            
+
              self.search_endpoint = os.getenv("AI_SEARCH_URL")
              self.search_key = os.getenv("AI_SEARCH_KEY")
-             self.search_index_name = os.getenv("AZURE_SEARCH_INDEX", "employeehandbook")
-            
-             self.search_client = SearchClient(
+
+             self.index_client = SearchIndexClient(
                  endpoint=self.search_endpoint,
-                 index_name=self.search_index_name,
                  credential=AzureKeyCredential(self.search_key)
              )
-            
+             self._handbook_index_name = None
+
          def generate_embedding(self, text: str) -> List[float]:
              if not text:
                  raise ValueError("Input text cannot be empty")
-                
+
              url = f"{self.openai_endpoint}/openai/deployments/{self.embedding_deployment}/embeddings?api-version={self.embedding_api_version}"
              headers = {
                  "Content-Type": "application/json",
@@ -163,7 +163,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
                  "input": text,
                  "dimensions": 1536  # Standard for text-embedding-ada-002
              }
-            
+
              try:
                  response = requests.post(url, headers=headers, json=payload)
                  response.raise_for_status()
@@ -171,59 +171,79 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
                  return embedding_data["data"][0]["embedding"]
              except Exception as e:
                  raise Exception(f"Failed to generate embedding: {str(e)}")
-        
+
+         def _get_handbook_index_name(self) -> str:
+             if self._handbook_index_name:
+                 return self._handbook_index_name
+
+             for index in self.index_client.list_indexes():
+                 candidate_client = self.index_client.get_search_client(index.name)
+                 probe = candidate_client.search(search_text="*", select=["metadata_storage_path"], top=1)
+                 for doc in probe:
+                     path = doc.get("metadata_storage_path", "")
+                     if path and "handbook" in path.lower():
+                         self._handbook_index_name = index.name
+                         return self._handbook_index_name
+
+             raise ValueError("No Azure AI Search index containing the employee handbook was found on this search service.")
+
          def search_documents(self, query: str, top: int = 3) -> List[Dict[str, Any]]:
              try:
                  # Generate embedding for the query
                  query_embedding = self.generate_embedding(query)
-                
+
                  # Create a vectorized query
                  vector_query = VectorizedQuery(
                      vector=query_embedding,
                      k_nearest_neighbors=top,
-                     fields="contentVector"
+                     fields="snippet_vector"
                  )
-                
-                 # Execute the search
-                 results = self.search_client.search(
+
+                 # Execute the search against the discovered handbook index
+                 search_client = self.index_client.get_search_client(self._get_handbook_index_name())
+                 results = search_client.search(
                      search_text=query,  # Also include text search for hybrid retrieval
                      vector_queries=[vector_query],
-                     select=["id", "content", "page_num", "chunk_id"],
+                     select=["snippet", "metadata_storage_path"],
                      top=top
                  )
-                
+
                  # Format the results
                  search_results = []
                  for result in results:
                      search_results.append({
-                         "id": result["id"],
-                         "content": result["content"],
-                         "page_num": result.get("page_num", "Unknown"),
-                         "chunk_id": result.get("chunk_id", "Unknown"),
+                         "content": result.get("snippet", ""),
+                         "title": result.get("metadata_storage_path", "Unknown"),
                          "score": result["@search.score"]
                      })
-                
+
                  return search_results
-                
+
              except Exception as e:
                  raise Exception(f"Search failed: {str(e)}")
-        
-         def query_handbook(self, query: str, top: int = 3) -> str:
+
+         @kernel_function(description="Searches the Contoso employee handbook for policy and process information (e.g. vacation policy, performance reviews, benefits).")
+         def query_handbook(
+             self,
+             query: Annotated[str, "The question or topic to look up in the Contoso employee handbook"],
+             top: Annotated[int, "Number of top matching results to return"] = 3,
+         ) -> str:
              try:
                  results = self.search_documents(query, top)
-                
+
                  # Format the results into a nice response
                  if not results:
                      return "No relevant information found in the Contoso Handbook."
-                
+
                  response = f"Here's what I found in the Contoso Handbook about '{query}':\n\n"
                  for i, result in enumerate(results, 1):
-                     response += f"Result {i} (Page {result['page_num']}):\n{result['content']}\n\n"
-                
+                     response += f"Result {i} (Source: {result['title']}):\n{result['content']}\n\n"
+
                  return response
-                
+
              except Exception as e:
                  return f"Error querying the Contoso Handbook: {str(e)}"
+
      if __name__ == "__main__":
          search_plugin = ContosoSearchPlugin()
          query = "What is Contoso's vacation policy?"
@@ -280,7 +300,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 1. In case you encounter any indentation error, use the code from the following URL:
 
       ```
-      https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/python/lab-05.py
+      https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/python/lab-05.py
       ```
 
 1. Save the file.

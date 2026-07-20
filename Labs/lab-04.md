@@ -36,10 +36,16 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
     python api.py
     ```
     >**Note**:- Please don't close the `terminal`.
-1. You can find the OpenAPI spec in the following path `http://127.0.0.1:8000/openapi.json`.
+1. Open the following link in a new browser tab to review the OpenAPI spec:
+   ```
+   http://127.0.0.1:8000/openapi.json
+   ```
 
     ![](./media/image_075.png)
-1. The Swagger page can be found at `http://127.0.0.1:8000/docs`.
+1. Open the following link in another browser tab to go to the Swagger page for the API:   
+    ```
+    http://127.0.0.1:8000/docs
+    ```
 
     ![](./media/image_076.png)
 1. Navigate to `Python>src` directory and open **chat.py (1)** file.
@@ -52,6 +58,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
         openapi_document_path="http://127.0.0.1:8000/openapi.json",
         execution_settings=OpenAPIFunctionExecutionParameters(
             enable_payload_namespacing=True,
+            server_url_validation_allowed_base_urls=["http://localhost:8000", "http://127.0.0.1:8000"],
         )
     )
     ```
@@ -62,7 +69,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
 1. In case you encounter any indentation error, use the code from the following URL:
     ```
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/python/lab-04.py
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/python/lab-04.py
     ```
 1. Save the file.
 1. Right-click on `Python>src` **(1)** in the left pane and select **Open in Integrated Terminal (2)**.

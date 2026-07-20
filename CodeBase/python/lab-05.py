@@ -87,6 +87,7 @@ async def process_message(user_input):
         openapi_document_path="http://127.0.0.1:8000/openapi.json",
         execution_settings=OpenAPIFunctionExecutionParameters(
             enable_payload_namespacing=True,
+            server_url_validation_allowed_base_urls=["http://localhost:8000", "http://127.0.0.1:8000"],
         )
     )
 
