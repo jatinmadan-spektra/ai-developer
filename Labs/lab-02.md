@@ -60,6 +60,8 @@ In this task, you will explore different flow types in Microsoft Foundry by sett
 
     ![](./media/new/d6.png)
 
+    >**Note:** Update the AZURE_OPENAI_CHAT_DEPLOYMENT_NAME to **gpt-5.4** and AZURE_OPENAI_EMBED_DEPLOYMENT_NAME to **text-embedding-3-small**.
+
 1. Use **Ctrl+S** to save the file.
 
 </details>
@@ -67,7 +69,7 @@ In this task, you will explore different flow types in Microsoft Foundry by sett
 <details>
 <summary><strong>C Sharp(C#)</strong></summary>
 
-1. In VS Code, navigate to `Dotnet>src>BlazorAI` directory and open **appsettings.json** file.
+1. In VS Code, expand **Dotnet (1)**, **src (2)**, **BlazorAI (3)** directory and open **appsettings.json (4)** file.
 
     ![](./media/sk23.png)
 
@@ -80,6 +82,8 @@ In this task, you will explore different flow types in Microsoft Foundry by sett
 1. Paste **API key** copied earlier in the exercise besides `AOI_API_KEY`.
 
     ![](./media/new/d7.png)
+
+    >**Note:** Update the AOI_ENDPOINT to **gpt-5.4** and EMBEDDINGS_DEPLOPYMODEL to **text-embedding-3-small**.
 
 1. Use **Ctrl+S** to save the file.
 
@@ -153,7 +157,7 @@ In this task, you will explore different flow types in Microsoft Foundry by upda
 1. In case you encounter any indentation error, use the code from the following URL:
 
     ```
-    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/prod/CodeBase/python/lab-02.py
+    https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/python/lab-02.py
     ```
 
 1. Save the file.
@@ -197,6 +201,8 @@ In this task, you will explore different flow types in Microsoft Foundry by upda
 1. You will receive a response similar to the one shown below:
 
     ![](./media/new/d13.png)
+
+    >**Note:** If no response is generated, stop the current state and rerun the streamlit run app.py command from the terminal and try again.
 
 </details>
 
