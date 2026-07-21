@@ -65,7 +65,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
     ![](./media/image_077.png)
 
-     >**Note**: Please refer the screenshots to locate the code in proper position that helps you to avoid indentation error.
+     >**Note**: Please refer to the screenshots to locate the code in the proper position that helps you to avoid indentation errors.
 
 1. In case you encounter any indentation error, use the code from the following URL:
     ```
@@ -140,7 +140,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
     ![](./media/image_082.png)
 
-     >**Note**: Please refer the screenshots to locate the code in proper position that helps you to avoid indentation error.
+     >**Note**: Please refer to the screenshots to locate the code in the proper position that helps you to avoid indentation errors.
 
 1. In case you encounter any indentation error, use the code from the following URL:
     ```
@@ -168,7 +168,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
     ![](./media/image_083.png)
 
-1. Once you receive the response, navigate back to the Visual studio code terminal and then press **Ctrl+C** to stop the build process.
+1. Once you receive the response, navigate back to the Visual Studio Code terminal and then press **Ctrl+C** to stop the build process.
 
 </details>
 
@@ -176,7 +176,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
 In this exercise, we utilized **OpenAPI integration with Semantic Kernel** to enhance AI-driven applications through dynamic API orchestration. We imported the **WorkItems API** as an OpenAPI plugin, enabling seamless interaction with external services using AI-generated prompts. This enhanced our proficiency in simplifying API integration, reducing manual coding, and automating external service calls within intelligent applications.
 
-We have successfully completed the below tasks for **OpenAPI integration with Semantic Kernel**:  
+We have successfully completed the following tasks for **OpenAPI integration with Semantic Kernel**:  
 
 - Integrated **OpenAPI with Semantic Kernel** to enable dynamic API orchestration.  
 - Imported and configured the **WorkItems API** as an **OpenAPI plugin** for seamless external service interaction.  
