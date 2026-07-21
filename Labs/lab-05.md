@@ -13,7 +13,7 @@ In this exercise, you will be performing the following tasks:
 
 In this task, you will explore different flow types in Azure AI Foundry by deploying a Text Embedding model to enable text representation and similarity analysis.
 
-1. In your browser window in Lab VM, Navigate to the Microsoft Foundry portal.
+1. In your browser window in the Lab VM, navigate to the Microsoft Foundry portal.
 
 1. From the left navigation pane, select **Models (1)**, then click **Deploy a base model (2)**
 
@@ -35,19 +35,19 @@ In this task, you will explore different flow types in Azure AI Foundry by deplo
 
     ![](./media/su-5.png)
 
-1. Create an agent pop up appears, enter the agent name as **gpt (1)** and click **create and open playground (2)**.
+1. Create an agent; a pop-up appears. Enter the agent name as **gpt (1)** and click **Create and open playground (2)**.
     
     ![](./media/su-6.png)
 
-1. On the playground screen, scroll down and click **add (1)** on the knowledge section, then click **Connect to Foundy IQ (2)**.
+1. On the playground screen, scroll down and click **Add (1)** on the knowledge section, then click **Connect to Foundry IQ (2)**.
 
     ![](./media/su-7.png)
 
-1. On Connect to Foundry IQ pop-up, select Connection as **ai-search-<inject key="Deployment ID" enableCopy="false"></inject> (1)** and on knowledge base click **Create a new base in ai-search-<inject key="Deployment ID" enableCopy="false"></inject> (2)**.
+1. On the Connect to Foundry IQ pop-up, select Connection as **ai-search-<inject key="Deployment ID" enableCopy="false"></inject> (1)** and, on the knowledge base, click **Create a new base in ai-search-<inject key="Deployment ID" enableCopy="false"></inject> (2)**.
 
     ![](./media/su-8.png)
 
-1. On Create a new knowledge base screen,  enter name as **kb-<inject key="Deployment ID" enableCopy="false"></inject> (1)** and select the chat completion model as **gpt-5.4 (2)**, and select **Upload files (3)**.
+1. On the Create a new knowledge base screen,  enter the name as **kb-<inject key="Deployment ID" enableCopy="false"></inject> (1)**, select the chat completion model as **gpt-5.4 (2)**, and select **Upload files (3)**.
   
     ![](./media/su-9.png)
 
@@ -55,7 +55,7 @@ In this task, you will explore different flow types in Azure AI Foundry by deplo
 
     ![](./media/su-9a.png)
 
-1. On Create a knowledge source screen, enter name as **ks-file-<inject key="Deployment ID" enableCopy="false"></inject> (1)**, verify the embedding model as **text-embedding-3-small (2)**, and click **create (3)**.
+1. On the Create a knowledge source screen, enter the name as **ks-file-<inject key="Deployment ID" enableCopy="false"></inject> (1)**, verify the embedding model as **text-embedding-3-small (2)**, and click **Create (3)**.
 
     ![](./media/su-10.png)
 
@@ -108,7 +108,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
      > **Note:** Ensure that every value in the **.env** file is enclosed in **double quotes (")**.
 
-1. Paste the **Primary admin key** that you copied earlier in the exercise besides `AI_SEARCH_KEY`.
+1. Paste the **Primary admin key** that you copied earlier in the exercise beside `AI_SEARCH_KEY`.
 
      ![](./media/sk42.png)
 
@@ -281,7 +281,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
       ![](./media/image_096.png)
 
-      > **Note**: Please refer the screenshots to locate the code in proper position that helps you to avoid indentation error.
+      > **Note**: Please refer to the screenshots to locate the code in the proper position that helps you to avoid indentation errors.
 
 1. Add the following code in the `# Challenge 05 - Add Search Plugin` section of the file.
 
@@ -295,7 +295,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
       ![](./media/image_097.png)
 
-      > **Note**: Please refer the screenshots to locate the code in proper position that helps you to avoid indentation error.    
+      > **Note**: Please refer to the screenshots to locate the code in the proper position that helps you to avoid indentation errors.    
 
 1. In case you encounter any indentation error, use the code from the following URL:
 
@@ -621,7 +621,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
       ![](./media/image_109.png)
 
-1. Once you receive the response, navigate back to the Visual studio code terminal and then press **Ctrl+C** to stop the build process.
+1. Once you receive the response, navigate back to the Visual Studio Code terminal and then press **Ctrl+C** to stop the build process.
 
 </details>
 
@@ -629,7 +629,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
 In this exercise, we explored the **Retrieval-Augmented Generation (RAG) pattern** to enhance AI responses by integrating external knowledge into the generative process. We examined how retrieval mechanisms work alongside generative models to produce accurate, context-aware outputs. This enhanced our proficiency in building secure, knowledge-enriched AI solutions using the RAG architecture.
 
-You have successfully completed the below tasks for **Retrieval-Augmented Generation (RAG) implementation**:  
+You have successfully completed the tasks below for **Retrieval-Augmented Generation (RAG) implementation**:  
 
 - Integrated the **RAG pattern** to enhance AI-generated responses with external knowledge retrieval.  
 - Utilized **Azure AI Search** to fetch relevant contextual data for more accurate outputs.  
