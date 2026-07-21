@@ -55,7 +55,7 @@ In this task, you will explore different flow types in Azure AI Foundry by filte
 
     ![](./media/update-h.png)
 
-1. On Add terms blade, Enter term as  **password (1)** and then click **Add (2)**, make sure the Type should be Exact match. 
+1. On the Add Terms blade, enter the term as  **password (1)** and then click **Add (2)**; make sure the Type is set to Exact match. 
 
     ![](./media/update-i.png)   
 
@@ -74,7 +74,7 @@ In this task, you will explore different flow types in Azure AI Foundry by filte
     - poker
     - betting
 
-1. Once all terms are added click on **Create**.
+1. Once all terms are added, click on **Create**.
 
       ![](./media/update-k.png)
  
@@ -83,7 +83,7 @@ In this task, you will explore different flow types in Azure AI Foundry by filte
 
 In this exercise, we explored **content filtering** in **Azure AI Foundry** to support the development of safer and more responsible AI applications. We applied built-in filters, adjusted content moderation settings, and created custom rules to block unwanted content within Azure AI Foundry Studio. This enhanced our proficiency in implementing ethical and secure AI solutions.
 
-You have successfully completed the below tasks for **content filtering in Azure AI Foundry**:  
+You have successfully completed the tasks below for **content filtering in Azure AI Foundry**:  
 
 - Implemented **Azure AI Content Safety** to ensure responsible AI interactions.  
 - Applied **built-in content filters** to block harmful or inappropriate responses.  
