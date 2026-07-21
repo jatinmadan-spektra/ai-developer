@@ -89,7 +89,7 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
 In this exercise, we integrated a **multi-agent system** into an AI application to process user requests through multiple specialized agents. We explored how each agent, with its own **persona and responsibility**, contributed expertise to generate a comprehensive response. This enhanced our proficiency in **orchestrating multi-agent interactions** to create intelligent, context-aware AI solutions.
 
- You have successfully completed the below tasks for **multi-agent system development**:  
+ You have successfully completed the tasks below for **multi-agent system development**:  
 
 - Designed a **multi-agent system** to process user requests through specialized agents.  
 - Assigned **distinct personas and responsibilities** to each agent for task-specific expertise.  
