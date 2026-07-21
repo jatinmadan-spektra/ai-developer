@@ -326,7 +326,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/new/e9.png)
 
-     >**Note**: Please refer the screenshots to locate the code in proper position that helps you to avoid indentation error.
+     >**Note**: Please refer to the screenshots to locate the code in the proper position that helps you to avoid indentation errors.
 
 1. Add the following code in the `// Challenge 03 - Add Time Plugin` section of the file.
     ```
@@ -364,7 +364,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
     ```
     dotnet run
     ```
-1. Open a new tab in the browser and navigate to the below link for **blazor-aichat**
+1. Open a new tab in the browser and navigate to the link below for **blazor-aichat**
 
     ```
     https://localhost:7118/
@@ -380,7 +380,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/new/f3.png)
 
-1. Once you receive the response, navigate back to the Visual Studio code terminal and then press **Ctrl+C** to stop the build process.
+1. Once you receive the response, navigate back to the Visual Studio Code terminal and then press **Ctrl+C** to stop the build process.
 
 </details>
 
@@ -388,7 +388,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
 In this task, you will explore different flow types in Microsoft Foundry by creating and importing the Geocoding Plugin to enable location-based functionality.
 
-1. Open a new tab in the browser, navigate to the Geocoding API portal using below link and click on the **Get API Key** button on the top.
+1. Open a new tab in the browser, navigate to the Geocoding API portal using the link below, and click on the **Get API Key** button at the top.
 
     ```
     https://geocode.maps.co/
@@ -406,7 +406,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/new/g3.png)
 
-1. You will receive your free **geocoding API key** in another mail, save it in Notepad for further use.
+1. You will receive your free **geocoding API key** in another email; save it in Notepad for further use.
 
     ![](./media/new/g4.png)
 
@@ -449,7 +449,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/image_061.png)
 
-     >**Note**: Please refer the screenshots to locate the code in proper position that helps you to avoid indentation error.
+     >**Note**: Please refer to the screenshots to locate the code in the proper position that helps you to avoid indentation errors.
 
 1. In case you encounter any indentation error, use the code from the following URL:
 
@@ -481,7 +481,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
     What are the geo-coordinates for Tampa, FL
     ```
 
-1. Since the AI has the **Geocoding Plugin**, it will be able to provide real-time information, you will receive a response similar to the following:
+1. Since the AI has the **Geocoding Plugin**, it will be able to provide real-time information; you will receive a response similar to the following:
 
     ```
     The geo-coordinates for Tampa, FL are:
@@ -501,7 +501,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/new/g6.png)
 
-1. Paste the geocoding API key you received just now via e-mail besides `GEOCODING_API_KEY`.
+1. Paste the geocoding API key you received just now via e-mail beside `GEOCODING_API_KEY`.
 
     ![](./media/new/g6a.png)
 
@@ -524,7 +524,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/image_064.png)
 
-     >**Note**: Please refer the screenshots to locate the code in proper position that helps you to avoid indentation error.
+     >**Note**: Please refer to the screenshots to locate the code in the proper position that helps you to avoid indentation errors.
 
 1. In case you encounter any indentation error, use the code from the following URL:
 
@@ -544,7 +544,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
     dotnet run
     ```
 
-1. Open a new tab in the browser and navigate to the below link for **blazor-aichat**
+1. Open a new tab in the browser and navigate to the link below for **blazor-aichat**
 
     ```
     https://localhost:7118/
@@ -556,7 +556,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
     What are the geo-coordinates for Tampa, FL
     ```
 
-1. Since the AI has the **Geocoding Plugin**, it will be able to provide real-time information, you will get a response similar to the following:
+1. Since the AI has the **Geocoding Plugin**, it will be able to provide real-time information; you will get a response similar to the following:
 
     ```
     The geo-coordinates for Tampa, FL are:
@@ -694,7 +694,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/image_068.png)
 
-     >**Note**: Please refer the screenshots to locate the code in proper position that helps you to avoid indentation error.  
+     >**Note**: Please refer to the screenshots to locate the code in the proper position that helps you to avoid indentation errors.  
 
 1. In case you encounter any indentation error, use the code from the following URL:
 
@@ -738,7 +738,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     2️⃣ Because the Weather Forecast requires a Latitude and Longitude, the AI should instruct Semantic Kernel to call the GetLocation function on the Geocoding Plugin to get the coordinates for San Francisco
 
-    3️⃣ Finally, the AI should ask Semantic Kernel to call the GetWeatherForecast function on the Weather Plugin passing in the current date/time and Lat/Long to get the weather forecast for Next Thursday (expressed as the number of days in the future) at the coordinates for San Francisco
+    3️⃣ Finally, the AI should ask Semantic Kernel to call the GetWeatherForecast function on the Weather Plugin, passing in the current date/time and Lat/Long to get the weather forecast for Next Thursday (expressed as the number of days in the future) at the coordinates for San Francisco
 
     A simplified sequence diagram between Semantic Kernel and AI is shown below:
 
@@ -974,7 +974,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     ![](./media/image_072.png)
 
-    >**Note**: If the results are not visible, close the terminal, rerun the command `dotnet run`and enter the prompt again.
+    >**Note**: If the results are not visible, close the terminal, rerun the command `dotnet run`, and enter the prompt again.
 
     The AI will perform the following plan to answer the question but may do so in a different order or with a different set of functions:
 
@@ -982,7 +982,7 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
     2️⃣ Because the Weather Forecast requires a Latitude and Longitude, the AI should instruct Semantic Kernel to call the GetLocation function on the Geocoding Plugin to get the coordinates for San Francisco
 
-    3️⃣ Finally, the AI should ask Semantic Kernel to call the GetWeatherForecast function on the Weather Plugin passing in the current date/time and Lat/Long to get the weather forecast for Next Thursday (expressed as the number of days in the future) at the coordinates for San Francisco
+    3️⃣ Finally, the AI should ask Semantic Kernel to call the GetWeatherForecast function on the Weather Plugin, passing in the current date/time and Lat/Long to get the weather forecast for Next Thursday (expressed as the number of days in the future) at the coordinates for San Francisco
 
     A simplified sequence diagram between Semantic Kernel and AI is shown below:
 
