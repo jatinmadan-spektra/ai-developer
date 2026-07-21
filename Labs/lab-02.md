@@ -39,9 +39,9 @@ In this task, you will explore different flow types in Microsoft Foundry by sett
 
     ![](./media/new/d2.png)
 
-    >**Note:** If a pop-up window opens asking for Github Copilot chat wants to sign in, click on **Cancel**.
+    >**Note:** If a pop-up window opens asking for GitHub Copilot chat to sign in, click on **Cancel**.
 
-1. Navigate back to **Microsoft Foundry** portal and click on **Home (1)**. Copy the **API Key (3)** and copy the **Azure OpenAI endpoint (4)** using the copy icons and paste it into **Notepad** as this is to be used in the upcoming exercises.
+1. Navigate back to **Microsoft Foundry** portal and click on **Home (1)**. Copy the **API Key (3)** and the **Azure OpenAI endpoint (4)** using the copy icons, then paste them into **Notepad**, as they will be used in the upcoming exercises.
 
     ![](./media/new/image-09.png)
 
@@ -83,7 +83,7 @@ In this task, you will explore different flow types in Microsoft Foundry by sett
 
     ![](./media/new/d7.png)
 
-    >**Note:** Update the AOI_ENDPOINT to **gpt-5.4** and EMBEDDINGS_DEPLOPYMODEL to **text-embedding-3-small**.
+    >**Note:** Update the AOI_DEPLOYMODEL to **gpt-5.4** and EMBEDDINGS_DEPLOYMODEL to **text-embedding-3-small**.
 
 1. Use **Ctrl+S** to save the file.
 
@@ -276,7 +276,7 @@ In this task, you will explore different flow types in Microsoft Foundry by upda
 
     >**Note:** Please note that the output displayed here may not be the same as the output shown in the portal.
 
-1. Once you receive the response, navigate back to the Visual studio code terminal and then press **Ctrl+C** to stop the build process.
+1. Once you receive the response, navigate back to the Visual Studio Code terminal and then press **Ctrl+C** to stop the build process.
 
 </details>
 
