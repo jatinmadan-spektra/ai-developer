@@ -452,8 +452,8 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
      >**Note**: Please refer the screenshots to locate the code in proper position that helps you to avoid indentation error.
 
 1. In case you encounter any indentation error, use the code from the following URL:
-    ```
 
+    ```
     https://raw.githubusercontent.com/CloudLabsAI-Azure/ai-developer/refs/heads/guided-labs/CodeBase/python/lab-03_geo_coding.py
     ```
 
@@ -499,9 +499,11 @@ In this task, you will explore different flow types in Microsoft Foundry by crea
 
 1. Navigate to `Dotnet>src>BlazorAI` directory and open **appsettings.json** file.
 
+    ![](./media/new/g6.png)
+
 1. Paste the geocoding API key you received just now via e-mail besides `GEOCODING_API_KEY`.
 
-    ![](./media/new/g6.png)
+    ![](./media/new/g6a.png)
 
     >Note:- Ensure that every value in the **appsettings.json** file is enclosed in **double quotes (")**.
 

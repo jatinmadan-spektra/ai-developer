@@ -43,15 +43,15 @@ In this task, you will explore different flow types in Azure AI Foundry by deplo
 
     ![](./media/su-7.png)
 
-1. On Connect to Foundry IQ pop-up, select Connection as **ai-search-<inject key="Deployment ID" enableCopy="false"></inject>** and on knowledge base click **Create a new base in ai-search-<inject key="Deployment ID" enableCopy="false"></inject>**.
+1. On Connect to Foundry IQ pop-up, select Connection as **ai-search-<inject key="Deployment ID" enableCopy="false"></inject> (1)** and on knowledge base click **Create a new base in ai-search-<inject key="Deployment ID" enableCopy="false"></inject> (2)**.
 
     ![](./media/su-8.png)
 
-1. On Create a new knowledge base screen,  enter name as **kb-<inject key="Deployment ID" enableCopy="false"></inject> (1)** and select the chat completion model is **gpt-5.4 (2)**, and select **upload files (3)**.
+1. On Create a new knowledge base screen,  enter name as **kb-<inject key="Deployment ID" enableCopy="false"></inject> (1)** and select the chat completion model as **gpt-5.4 (2)**, and select **Upload files (3)**.
   
     ![](./media/su-9.png)
 
-1. Navigate to `C:\LabFiles\ai-developer\Dotnet\src\BlazorAI\data\` (1) and select employee_handbook.pdf (2). Click on Open (3).
+1. Navigate to **`C:\LabFiles\ai-developer\Dotnet\src\BlazorAI\data\` (1)**, select **employee_handbook.pdf (2**) and click on **Open (3)**.
 
     ![](./media/su-9a.png)
 
@@ -368,151 +368,151 @@ In this task, you will explore different flow types in Azure AI Foundry by creat
 
 1. Add the following code to the file:
 
-   ```csharp
-   using System.ComponentModel;
-   using System.Text;
-   using System.Text.Json.Serialization;
-   using Azure;
-   using Azure.Search.Documents;
-   using Azure.Search.Documents.Indexes;
-   using Azure.Search.Documents.Indexes.Models;
-   using Azure.Search.Documents.Models;
-   using Microsoft.SemanticKernel;
-   using Microsoft.SemanticKernel.Embeddings;
+     ```csharp
+     using System.ComponentModel;
+     using System.Text;
+     using System.Text.Json.Serialization;
+     using Azure;
+     using Azure.Search.Documents;
+     using Azure.Search.Documents.Indexes;
+     using Azure.Search.Documents.Indexes.Models;
+     using Azure.Search.Documents.Models;
+     using Microsoft.SemanticKernel;
+     using Microsoft.SemanticKernel.Embeddings;
 
-   namespace BlazorAI.Plugins
-   {
-       public class ContosoSearchPlugin
-       {
-           private readonly ITextEmbeddingGenerationService _textEmbeddingGenerationService;
-           private readonly SearchIndexClient _indexClient;
-           private string? _handbookIndexName;
+     namespace BlazorAI.Plugins
+     {
+         public class ContosoSearchPlugin
+         {
+             private readonly ITextEmbeddingGenerationService _textEmbeddingGenerationService;
+             private readonly SearchIndexClient _indexClient;
+             private string? _handbookIndexName;
 
-           public ContosoSearchPlugin(IConfiguration configuration)
-           {
-               // Create the search index client
-               _indexClient = new SearchIndexClient(
+             public ContosoSearchPlugin(IConfiguration configuration)
+             {
+                 // Create the search index client
+                 _indexClient = new SearchIndexClient(
                    new Uri(configuration["AI_SEARCH_URL"]),
                    new AzureKeyCredential(configuration["AI_SEARCH_KEY"]));
 
-               // Get the embedding service from the kernel
-               var kernelBuilder = Kernel.CreateBuilder();
+                 // Get the embedding service from the kernel
+                 var kernelBuilder = Kernel.CreateBuilder();
 
-               kernelBuilder.AddAzureOpenAITextEmbeddingGeneration(
-                   configuration["EMBEDDINGS_DEPLOYMODEL"],
-                   configuration["AOI_ENDPOINT"],
-                   configuration["AOI_API_KEY"]);
+                 kernelBuilder.AddAzureOpenAITextEmbeddingGeneration(
+                     configuration["EMBEDDINGS_DEPLOYMODEL"],
+                     configuration["AOI_ENDPOINT"],
+                     configuration["AOI_API_KEY"]);
 
-               var kernel = kernelBuilder.Build();
+                 var kernel = kernelBuilder.Build();
 
-               _textEmbeddingGenerationService =
-                   kernel.GetRequiredService<ITextEmbeddingGenerationService>();
-           }
+                 _textEmbeddingGenerationService =
+                   kernel.  GetRequiredService<ITextEmbeddingGenerationService>();
+             }
 
-           [KernelFunction("SearchHandbook")]
-           [Description("Searches the Contoso employee handbook for information about company policies, benefits, procedures, or other employee-related questions. Use this when the user asks about company policies, employee benefits, work procedures, or any information that might be in an employee handbook.")]
-           public async Task<string> Search(
+             [KernelFunction("SearchHandbook")]
+             [Description("Searches the Contoso employee handbook for information about company policies, benefits, procedures, or other employee-related questions. Use this when the user asks about company policies, employee benefits, work procedures, or any information that might be in an employee handbook.")]
+             public async Task<string> Search(
                [Description("The user's question about company policies, benefits, procedures or other handbook-related information")]
                string query)
-           {
-               try
-               {
-                   // Convert string query to vector embedding
-                   ReadOnlyMemory<float> embedding =
+             {
+                 try
+                 {
+                     // Convert string query to vector embedding
+                     ReadOnlyMemory<float> embedding =
                        await _textEmbeddingGenerationService.GenerateEmbeddingAsync(query);
 
-                   // Get client for search operations
-                   string indexName = await GetHandbookIndexNameAsync();
-                   SearchClient searchClient = _indexClient.GetSearchClient(indexName);
+                     // Get client for search operations
+                     string indexName = await GetHandbookIndexNameAsync();
+                     SearchClient searchClient = _indexClient.GetSearchClient(indexName);
 
-                   // Configure request parameters
-                   VectorizedQuery vectorQuery = new(embedding);
-                   vectorQuery.Fields.Add("snippet_vector");
-                   vectorQuery.KNearestNeighborsCount = 3;
+                     // Configure request parameters
+                     VectorizedQuery vectorQuery = new(embedding);
+                     vectorQuery.Fields.Add("snippet_vector");
+                     vectorQuery.KNearestNeighborsCount = 3;
 
-                   SearchOptions searchOptions = new()
-                   {
-                       VectorSearch = new()
-                       {
-                           Queries = { vectorQuery }
-                       },
-                       Size = 3
-                   };
+                     SearchOptions searchOptions = new()
+                     {
+                         VectorSearch = new()
+                         {
+                             Queries = { vectorQuery }
+                         },
+                         Size = 3
+                     };
 
-                   // Perform search request
-                   Response<SearchResults<IndexSchema>> response =
-                       await searchClient.SearchAsync<IndexSchema>(searchOptions);
+                     // Perform search request
+                     Response<SearchResults<IndexSchema>> response =
+                         await searchClient.SearchAsync<IndexSchema>(searchOptions);
 
-                   // Collect search results
-                   StringBuilder results = new();
+                     // Collect search results
+                     StringBuilder results = new();
 
-                   await foreach (SearchResult<IndexSchema> result in response.Value.GetResultsAsync())
-                   {
-                       if (!string.IsNullOrEmpty(result.Document.Content))
-                       {
-                           results.AppendLine($"Source: {result.Document.Title}");
-                           results.AppendLine($"Content: {result.Document.Content}");
+                     await foreach (SearchResult<IndexSchema> result in response.Value.GetResultsAsync())
+                     {
+                         if (!string.IsNullOrEmpty(result.Document.Content))
+                         {
+                             results.AppendLine($"Source: {result.Document.Title}");
+                             results.AppendLine($"Content: {result.Document.Content}");
                            results.AppendLine();
-                       }
-                   }
+                         }
+                     }
 
-                   return results.Length > 0
-                       ? results.ToString()
-                       : "No relevant information found in the employee handbook.";
-               }
-               catch (Exception ex)
-               {
-                   return $"Search error: {ex.Message}";
-               }
-           }
+                     return results.Length > 0
+                         ? results.ToString()
+                         : "No relevant information found in the employee handbook.";
+                 }
+                 catch (Exception ex)
+                 {
+                     return $"Search error: {ex.Message}";
+                 }
+             }
 
-           private async Task<string> GetHandbookIndexNameAsync()
-           {
-               if (_handbookIndexName != null)
-               {
-                   return _handbookIndexName;
-               }
+             private async Task<string> GetHandbookIndexNameAsync()
+             {
+                 if (_handbookIndexName != null)
+                 {
+                     return _handbookIndexName;
+                 }
 
-               await foreach (SearchIndex index in _indexClient.GetIndexesAsync())
-               {
-                   SearchClient candidateClient = _indexClient.GetSearchClient(index.Name);
+                 await foreach (SearchIndex index in _indexClient.GetIndexesAsync())
+                 {
+                     SearchClient candidateClient = _indexClient.GetSearchClient(index.Name);
 
-                   SearchOptions probeOptions = new()
-                   {
-                       Size = 1
-                   };
+                     SearchOptions probeOptions = new()
+                     {
+                         Size = 1
+                     };
 
-                   probeOptions.Select.Add("metadata_storage_path");
+                     probeOptions.Select.Add("metadata_storage_path");
 
-                   Response<SearchResults<SearchDocument>> probe =
-                       await candidateClient.SearchAsync<SearchDocument>("*", probeOptions);
+                     Response<SearchResults<SearchDocument>> probe =
+                         await candidateClient.SearchAsync<SearchDocument>("*", probeOptions);
 
-                   await foreach (SearchResult<SearchDocument> doc in probe.Value.GetResultsAsync())
-                   {
-                       if (doc.Document.TryGetValue("metadata_storage_path", out object? path) &&
+                     await foreach (SearchResult<SearchDocument> doc in probe.Value.GetResultsAsync())
+                     {
+                         if (doc.Document.TryGetValue("metadata_storage_path", out object? path) &&
                            path?.ToString().Contains("handbook", StringComparison.OrdinalIgnoreCase) == true)
-                       {
-                           _handbookIndexName = index.Name;
+                         {
+                             _handbookIndexName = index.Name;
                            return _handbookIndexName;
-                       }
-                   }
-               }
+                         }
+                     }
+                 }
 
-               throw new InvalidOperationException(
+                 throw new InvalidOperationException(
                    "No Azure AI Search index containing the employee handbook was found on this search service.");
-           }
+             }
 
-           private sealed class IndexSchema
-           {
-               [JsonPropertyName("snippet")]
-               public string Content { get; set; }
+             private sealed class IndexSchema
+             {
+                 [JsonPropertyName("snippet")]
+                 public string Content { get; set; }
 
-               [JsonPropertyName("metadata_storage_path")]
-               public string Title { get; set; }
-           }
-       }
-   }
-   ```
+                 [JsonPropertyName("metadata_storage_path")]
+                 public string Title { get; set; }
+             }
+         }
+     }
+     ```
 
 1. Save the file.
 
